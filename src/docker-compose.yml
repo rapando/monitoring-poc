@@ -7,4 +7,4 @@ services:
       - "5001"
     network_mode: host
     volumes:
-      - /app/logs:/apps/logs/monitoring
+      - /apps/logs/monitoring:/app/logs
