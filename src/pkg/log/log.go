@@ -20,7 +20,7 @@ type logEntry struct {
 }
 
 func InitLogger() {
-	var path = "/app/logs"
+	var path = "/apps/logs/monitoring"
 	var writer *rotatelogs.RotateLogs
 	var err error
 
