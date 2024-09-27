@@ -1,0 +1,17 @@
+version: '2'
+sql:
+  - engine: 'mysql'
+    queries: 'db/queries.sql'
+    schema: 'db/init.sql'
+    gen:
+      go:
+        package: 'models'
+        out: './models'
+        emit_json_tags: true
+        emit_prepared_queries: true
+        emit_interface: false
+        overrides:
+          - db_type: 'BIGINT'
+            go_type: 'int64'
+          - db_type: 'DECIMAL'
+            go_type: 'float64'
