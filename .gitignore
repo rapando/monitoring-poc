@@ -5,3 +5,4 @@
 tmp/
 build/
 docker/
+src/bin
