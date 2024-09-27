@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 2s
+scrape_configs:
+  - job_name: 'monitoring-api'
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ['monitoring-api.bg.co.ke:443']

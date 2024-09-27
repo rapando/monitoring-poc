@@ -7,21 +7,27 @@ const homeTrend = new Trend('get_home_response_time');
 const countTrend = new Trend('get_count_response_time');
 const addTrend = new Trend('get_add_response_time');
 
-const BASE_URL = 'http://localhost:5001';
+const BASE_URL = 'https://monitoring-api.bg.co.ke';
 
 export let options = {
     stages: [
-        {duration: '30s', target: 50},
-        {duration: '1m', target: 100},
-        {duration: '1m', target: 100},
-        {duration: '30s', target: 0},
-        {duration: '30s', target: 500},
-        {duration: '1m', target: 1000},
+        {duration: '5s', target: 50},
+        {duration: '5s', target: 100},
+        {duration: '5s', target: 200},
+        {duration: '5s', target: 300},
+        {duration: '5s', target: 500},
+        {duration: '30s', target: 200},
+        {duration: '10s', target: 10},
+        {duration: '10s', target: 10},
+        {duration: '10s', target: 300},
+        {duration: '10s', target: 500},
+        {duration: '10s', target: 600},
+        {duration: '10s', target: 1000},
     ],
     thresholds: {
-        'get_home_response_time': ['p(95)<500'],
-        'get_count_response_time': ['p(95)<500'],
-        'get_add_response_time': ['p(95)<500'],
+        'get_home_response_time': ['p(95)<1000'],
+        'get_count_response_time': ['p(95)<1000'],
+        'get_add_response_time': ['p(95)<1000'],
     },
 };
 

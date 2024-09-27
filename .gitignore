@@ -6,3 +6,4 @@ tmp/
 build/
 docker/
 src/bin
+monitoring/data

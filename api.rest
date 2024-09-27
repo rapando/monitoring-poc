@@ -1,8 +1,0 @@
-### home
-GET http://localhost:5001
-
-### create data
-POST http://localhost:5001/data
-
-### count data
-GET http://localhost:5001/data
